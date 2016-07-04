@@ -58,6 +58,7 @@
                                 </constraints>
                                 <state key="normal" title="Pause"/>
                                 <connections>
+                                    <action selector="pauseActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="epy-3a-Vfn"/>
                                     <action selector="pauseButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="Bmt-g3-ND3"/>
                                 </connections>
                             </button>
@@ -112,7 +113,7 @@
                                 </constraints>
                                 <state key="normal" title="End"/>
                                 <connections>
-                                    <action selector="endActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="Ip4-2g-XnE"/>
+                                    <action selector="endActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="z4N-jV-md6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Units" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTm-lg-OBU">
@@ -128,6 +129,7 @@
                                 </constraints>
                                 <state key="normal" title="Start"/>
                                 <connections>
+                                    <action selector="startActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="u69-Rz-ehr"/>
                                     <action selector="startButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="ynj-Zb-Ah4"/>
                                 </connections>
                             </button>
@@ -219,15 +221,12 @@
                     <connections>
                         <outlet property="distanceLabel" destination="MES-wu-uGG" id="OCb-Ua-3c0"/>
                         <outlet property="distanceOutputLabel" destination="91W-po-dOj" id="1KY-qi-OdY"/>
-                        <outlet property="endButton" destination="bFz-Ox-Ynl" id="777-Jk-ett"/>
-                        <outlet property="map" destination="mUR-MX-sPL" id="EIo-q6-Jix"/>
-                        <outlet property="pauseButton" destination="Hkc-H3-Wlk" id="qVW-1h-czh"/>
+                        <outlet property="map" destination="mUR-MX-sPL" id="RKP-Eb-c9A"/>
                         <outlet property="speedLabel" destination="00T-Qn-JA7" id="1kg-h2-QyA"/>
                         <outlet property="speedOutputLabel" destination="9th-eQ-IDg" id="tJX-T3-auq"/>
-                        <outlet property="startButton" destination="ggp-rY-Ygw" id="nxq-31-UDB"/>
                         <outlet property="timeLabel" destination="wAE-Hq-k8R" id="9Gh-l7-UWE"/>
                         <outlet property="timeOutputLabel" destination="pwJ-JB-2Fk" id="CfH-8O-9vn"/>
-                        <outlet property="unitsLabel" destination="GTm-lg-OBU" id="FGZ-eg-w5p"/>
+                        <outlet property="unitsLabel" destination="GTm-lg-OBU" id="wqp-mO-Byf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHG-uR-Ahs" userLabel="First Responder" sceneMemberID="firstResponder"/>
