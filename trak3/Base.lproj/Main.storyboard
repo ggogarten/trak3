@@ -59,7 +59,6 @@
                                 <state key="normal" title="Pause"/>
                                 <connections>
                                     <action selector="pauseActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="epy-3a-Vfn"/>
-                                    <action selector="pauseButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="Bmt-g3-ND3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00T-Qn-JA7">
@@ -105,17 +104,6 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-Ox-Ynl">
-                                <rect key="frame" x="246" y="279" width="75" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="OmO-U1-Kco"/>
-                                    <constraint firstAttribute="width" constant="75" id="cG2-cR-ngG"/>
-                                </constraints>
-                                <state key="normal" title="End"/>
-                                <connections>
-                                    <action selector="endActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="z4N-jV-md6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Units" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTm-lg-OBU">
                                 <rect key="frame" x="289" y="11" width="75" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
@@ -130,7 +118,17 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="u69-Rz-ehr"/>
-                                    <action selector="startButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="ynj-Zb-Ah4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-Ox-Ynl">
+                                <rect key="frame" x="246" y="279" width="75" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OmO-U1-Kco"/>
+                                    <constraint firstAttribute="width" constant="75" id="cG2-cR-ngG"/>
+                                </constraints>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="z4N-jV-md6"/>
                                 </connections>
                             </button>
                         </subviews>

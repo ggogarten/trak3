@@ -13,11 +13,14 @@ import CoreLocation
 class ActivityViewController: UIViewController {
     
     
+   var timer = NSTimer()
+    
+    var time = 0
+    
+    
+    
     
     @IBOutlet weak var map: MKMapView!
-    
-    
-    
     
     
     @IBOutlet weak var unitsLabel: UILabel!
@@ -39,8 +42,19 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var timeOutputLabel: UILabel!
     
+    func increaseTimer(){
+        
+        time = time + 1
+        
+        timeOutputLabel.text = String(time)
+        
+    }
+    
     
     @IBAction func startActivityButton(sender: AnyObject) {
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ActivityViewController.increaseTimer), userInfo: nil, repeats: true)
+        
     }
     
     
