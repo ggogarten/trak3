@@ -22,17 +22,23 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Trac3 needs to know you're location for the app to function properly.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Trac3 needs to know you're location for the app to function properly.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Trac3 needs to know you&apos;re location for the app to function properly.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Trac3 needs to know you&apos;re location for the app to function properly.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>healthkit</string>
 	</array>
 	<key>UIRequiresFullScreen</key>
 	<true/>

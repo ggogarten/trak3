@@ -16,6 +16,7 @@
 		3EB6C6B41D2ABE7100D712A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6C6B31D2ABE7100D712A8 /* CoreLocation.framework */; };
 		3EB6C6B61D2ABE7900D712A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6C6B51D2ABE7900D712A8 /* MapKit.framework */; };
 		3EB6C6B81D2ABF6500D712A8 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6C6B71D2ABF6500D712A8 /* ActivityViewController.swift */; };
+		3EB6C6BB1D2AD99900D712A8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6C6BA1D2AD99900D712A8 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		3EB6C6B31D2ABE7100D712A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3EB6C6B51D2ABE7900D712A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3EB6C6B71D2ABF6500D712A8 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		3EB6C6B91D2AD99900D712A8 /* trak3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = trak3.entitlements; sourceTree = "<group>"; };
+		3EB6C6BA1D2AD99900D712A8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB6C6BB1D2AD99900D712A8 /* HealthKit.framework in Frameworks */,
 				3EB6C6B61D2ABE7900D712A8 /* MapKit.framework in Frameworks */,
 				3EB6C6B41D2ABE7100D712A8 /* CoreLocation.framework in Frameworks */,
 			);
@@ -48,6 +52,7 @@
 		3EA16D2B1D25CDE3009F4985 = {
 			isa = PBXGroup;
 			children = (
+				3EB6C6BA1D2AD99900D712A8 /* HealthKit.framework */,
 				3EB6C6B51D2ABE7900D712A8 /* MapKit.framework */,
 				3EB6C6B31D2ABE7100D712A8 /* CoreLocation.framework */,
 				3EA16D361D25CDE3009F4985 /* trak3 */,
@@ -66,6 +71,7 @@
 		3EA16D361D25CDE3009F4985 /* trak3 */ = {
 			isa = PBXGroup;
 			children = (
+				3EB6C6B91D2AD99900D712A8 /* trak3.entitlements */,
 				3EA16D371D25CDE3009F4985 /* AppDelegate.swift */,
 				3EA16D391D25CDE3009F4985 /* ViewController.swift */,
 				3EA16D3B1D25CDE3009F4985 /* Main.storyboard */,
@@ -111,6 +117,14 @@
 					3EA16D331D25CDE3009F4985 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = C8G9U4K76Y;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -266,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = trak3/trak3.entitlements;
 				INFOPLIST_FILE = trak3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gogarten.trak3;
@@ -277,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = trak3/trak3.entitlements;
 				INFOPLIST_FILE = trak3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gogarten.trak3;

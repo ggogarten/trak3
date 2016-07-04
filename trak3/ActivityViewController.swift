@@ -9,18 +9,25 @@
 import UIKit
 import MapKit
 import CoreLocation
+import HealthKit
 
-class ActivityViewController: UIViewController {
+class ActivityViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     
-   var timer = NSTimer()
+    var timer = NSTimer()
     
-    var time = 0
+    var time = 0.0
     
+    var distance = 0.0
     
+    var units = String("Metric")
+    
+    var locations = [CLLocation]()
     
     
     @IBOutlet weak var map: MKMapView!
+    
+    var locationManager = CLLocationManager()
     
     
     @IBOutlet weak var unitsLabel: UILabel!
@@ -52,8 +59,12 @@ class ActivityViewController: UIViewController {
             let minutes = Int(time) / 60 % 60
             let seconds = Int(time) % 60
             
+            //            let secondsQuantity = HKQuantity(unit: HKUnit.secondUnit(), doubleValue: time)
+            //            let distanceQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: distance)
+            
             timeOutputLabel.text = String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-        
+           
+            
         } else {
             
             let minutes = Int(time) / 60 % 60
@@ -66,6 +77,8 @@ class ActivityViewController: UIViewController {
         
         
     }
+    
+    
     
     
     @IBAction func startActivityButton(sender: AnyObject) {
@@ -93,27 +106,86 @@ class ActivityViewController: UIViewController {
     
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        locationManager.delegate = self
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.activityType = .Fitness
+        locationManager.distanceFilter = 5.0
+        
+        locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.startUpdatingLocation()
+        
+        
+        self.map.showsUserLocation = true
+        self.map.mapType = MKMapType(rawValue: 0)!
+        self.map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+        
+        
         // Do any additional setup after loading the view.
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        //        print(locations)
+        
+        
+        
+        for location in locations {
+                
+                if locations.count > 0 {
+                    
+                    print(locations)
+                    distance = distance + location.distanceFromLocation(locations[0])
+                    print(distance)
 
+                    if units == "Metric" {
+                        
+                        var speed = location.speed
+                        var speedKph = String(format: "%.2f", speed * 3.6)
+                        
+                        self.speedOutputLabel.text = "\(speedKph)"
+                        
+                    } else {}
+
+                    
+                } else {
+                    
+                    self.locations.append(locations[0])
+                    
+                }
+            }
+        }
+        
+        
+        
+        
+        //        print("present location : \(newLocation.coordinate.latitude), \(newLocation.coordinate.longitude)")
+        //        print("speed : \(newLocation.speed)")
+        
+        
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
