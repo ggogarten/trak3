@@ -57,6 +57,9 @@
                                     <constraint firstAttribute="height" constant="50" id="ahU-tG-Vs5"/>
                                 </constraints>
                                 <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="Bmt-g3-ND3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00T-Qn-JA7">
                                 <rect key="frame" x="30" y="20" width="125" height="31"/>
@@ -108,6 +111,9 @@
                                     <constraint firstAttribute="width" constant="75" id="cG2-cR-ngG"/>
                                 </constraints>
                                 <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endActivityButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="Ip4-2g-XnE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Units" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTm-lg-OBU">
                                 <rect key="frame" x="289" y="11" width="75" height="35"/>
@@ -121,6 +127,9 @@
                                     <constraint firstAttribute="width" constant="75" id="wuc-DI-5mq"/>
                                 </constraints>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButton:" destination="q2p-1t-Nwh" eventType="touchUpInside" id="ynj-Zb-Ah4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

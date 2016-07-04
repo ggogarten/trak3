@@ -12,6 +12,10 @@ import CoreLocation
 
 class ActivityViewController: UIViewController {
     
+    var timer = NSTimer()
+    
+    var time = 0
+    
     
     @IBOutlet weak var unitsLabel: UILabel!
     
@@ -32,15 +36,25 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var timeOutputLabel: UILabel!
     
+    func increaseTimer() {
+        
+        time = time + 1
+        
+        timeOutputLabel.text = String(time)
+    
+    }
+    
+    @IBAction func startButton(sender: AnyObject) {
+    }
     
     
-    @IBOutlet weak var startButton: UIButton!
+    @IBAction func pauseButton(sender: AnyObject) {
+    }
     
     
-    @IBOutlet weak var pauseButton: UIButton!
+    @IBAction func endActivityButton(sender: AnyObject) {
+    }
     
-    
-    @IBOutlet weak var endButton: UIButton!
     
 
     @IBOutlet weak var map: MKMapView!
