@@ -46,7 +46,24 @@ class ActivityViewController: UIViewController {
         
         time = time + 1
         
-        timeOutputLabel.text = String(time)
+        if time > 3600 {
+            
+            let hours = Int(time) / 3600
+            let minutes = Int(time) / 60 % 60
+            let seconds = Int(time) % 60
+            
+            timeOutputLabel.text = String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+        
+        } else {
+            
+            let minutes = Int(time) / 60 % 60
+            let seconds = Int(time) % 60
+            
+            timeOutputLabel.text = String(format:"%02i:%02i", minutes, seconds)
+            
+        }
+        
+        
         
     }
     
@@ -59,10 +76,18 @@ class ActivityViewController: UIViewController {
     
     
     @IBAction func pauseActivityButton(sender: AnyObject) {
+        
+        timer.invalidate()
+        
     }
     
     
     @IBAction func endActivityButton(sender: AnyObject) {
+        
+        timer.invalidate()
+        time = 0
+        timeOutputLabel.text = "00:00"
+        
     }
     
     
