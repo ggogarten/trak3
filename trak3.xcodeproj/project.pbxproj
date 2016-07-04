@@ -13,6 +13,9 @@
 		3EA16D401D25CDE3009F4985 /* trak3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EA16D3E1D25CDE3009F4985 /* trak3.xcdatamodeld */; };
 		3EA16D421D25CDE3009F4985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA16D411D25CDE3009F4985 /* Assets.xcassets */; };
 		3EA16D451D25CDE3009F4985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA16D431D25CDE3009F4985 /* LaunchScreen.storyboard */; };
+		3EB6C6B41D2ABE7100D712A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6C6B31D2ABE7100D712A8 /* CoreLocation.framework */; };
+		3EB6C6B61D2ABE7900D712A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6C6B51D2ABE7900D712A8 /* MapKit.framework */; };
+		3EB6C6B81D2ABF6500D712A8 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6C6B71D2ABF6500D712A8 /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		3EA16D411D25CDE3009F4985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EA16D441D25CDE3009F4985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EA16D461D25CDE3009F4985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EB6C6B31D2ABE7100D712A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3EB6C6B51D2ABE7900D712A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3EB6C6B71D2ABF6500D712A8 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB6C6B61D2ABE7900D712A8 /* MapKit.framework in Frameworks */,
+				3EB6C6B41D2ABE7100D712A8 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +48,8 @@
 		3EA16D2B1D25CDE3009F4985 = {
 			isa = PBXGroup;
 			children = (
+				3EB6C6B51D2ABE7900D712A8 /* MapKit.framework */,
+				3EB6C6B31D2ABE7100D712A8 /* CoreLocation.framework */,
 				3EA16D361D25CDE3009F4985 /* trak3 */,
 				3EA16D351D25CDE3009F4985 /* Products */,
 			);
@@ -59,6 +69,7 @@
 				3EA16D371D25CDE3009F4985 /* AppDelegate.swift */,
 				3EA16D391D25CDE3009F4985 /* ViewController.swift */,
 				3EA16D3B1D25CDE3009F4985 /* Main.storyboard */,
+				3EB6C6B71D2ABF6500D712A8 /* ActivityViewController.swift */,
 				3EA16D411D25CDE3009F4985 /* Assets.xcassets */,
 				3EA16D431D25CDE3009F4985 /* LaunchScreen.storyboard */,
 				3EA16D461D25CDE3009F4985 /* Info.plist */,
@@ -142,6 +153,7 @@
 				3EA16D3A1D25CDE3009F4985 /* ViewController.swift in Sources */,
 				3EA16D401D25CDE3009F4985 /* trak3.xcdatamodeld in Sources */,
 				3EA16D381D25CDE3009F4985 /* AppDelegate.swift in Sources */,
+				3EB6C6B81D2ABF6500D712A8 /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +303,7 @@
 				3EA16D4B1D25CDE3009F4985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

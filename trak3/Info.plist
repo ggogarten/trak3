@@ -26,6 +26,10 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Trac3 needs to know you&apos;re location for the app to function properly.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Trac3 needs to know you&apos;re location for the app to function properly.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
